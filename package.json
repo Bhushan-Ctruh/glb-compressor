@@ -1,10 +1,10 @@
 {
-    "name": "vscode-extension-boilerplate",
-    "displayName": "VSCode extension boilerplate",
+    "name": "glb-Compressor",
+    "displayName": "GLB-Compressor",
     "version": "0.0.1",
     "preview": true,
-    "description": "An awesome boilerplate for VSCode extension development",
-    "publisher": "YuTengjing",
+    "description": "An extension for compressing GLB files using etc1s and draco compression",
+    "publisher": "Bhushan Wagh",
     "icon": "images/logo.png",
     "license": "SEE LICENSE IN LICENSE",
     "main": "dist/extension.js",
@@ -21,9 +21,9 @@
         "prepare": "husky install"
     },
     "author": {
-        "name": "YuTengjing",
-        "url": "https://github.com/tjx666",
-        "email": "ytj2713151713@gmail.com"
+        "name": "Bhushan Wagh",
+        "url": "https://github.com/bhushan6",
+        "email": "bhushanwagh6@gmail.com"
     },
     "badges": [
         {
@@ -40,7 +40,7 @@
     "homepage": "https://github.com/tjx666/vscode-extension-boilerplate/blob/master/README.md",
     "bugs": {
         "url": "https://github.com/tjx666/vscode-extension-boilerplate/issues",
-        "email": "ytj2713151713@gmail.com"
+        "email": "bhushanwagh6@gmail.com"
     },
     "repository": {
         "type": "git",
@@ -56,17 +56,19 @@
     "keywords": [
         "vscode",
         "vscode-extension",
-        "vscode-extension-boilerplate",
-        "boilerplate"
+        "glb compression",
+        "compression",
+        "etc1s",
+        "draco"
     ],
     "activationEvents": [
-        "onCommand:VSCodeExtensionBoilerplate.helloVSCode"
+        "onCommand:VSCodeExtensionBoilerplate.compressGLB"
     ],
     "contributes": {
         "commands": [
             {
-                "command": "VSCodeExtensionBoilerplate.helloVSCode",
-                "title": "Hello Visual Studio Code!"
+                "command": "VSCodeExtensionBoilerplate.compressGLB",
+                "title": "Compress GLB Files"
             }
         ]
     },
@@ -118,5 +120,8 @@
         "webpack-merge": "^5.8.0",
         "webpackbar": "^5.0.2",
         "yargs": "^17.6.2"
+    },
+    "dependencies": {
+        "@gltf-transform/cli": "^4.1.0"
     }
 }

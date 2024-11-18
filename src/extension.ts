@@ -1,15 +1,11 @@
 import * as vscode from 'vscode';
 
-import helloWorld from './helloWorld';
+import { compressGLBFiles } from './compressGlb';
 
 export function activate(context: vscode.ExtensionContext): void {
     context.subscriptions.push(
-        vscode.commands.registerCommand('VSCodeExtensionBoilerplate.helloVSCode', () =>
-            helloWorld(),
+        vscode.commands.registerCommand('VSCodeExtensionBoilerplate.compressGLB', () =>
+            compressGLBFiles(),
         ),
     );
-}
-
-export function deactivate(): void {
-    // recycle resource...
 }
